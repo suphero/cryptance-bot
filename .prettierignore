@@ -1,0 +1,13 @@
+.build/
+.github/*
+.nyc_output/*
+.serverless/
+coverage/*
+node_modules/
+.env*
+package.json
+package-lock.json
+*.md
+*.yml
+
+public/
