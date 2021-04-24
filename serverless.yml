@@ -36,4 +36,3 @@ functions:
       ENDPOINT_URL: ${param:ENDPOINT_URL}
       DEBUG: ${param:DEBUG}
       DEBUG_COLORS: "no"
-      NEXT_REMINDER_DAYS: ${param:NEXT_REMINDER_DAYS}

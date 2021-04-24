@@ -3,7 +3,7 @@ import Telegraf from 'telegraf';
 // tslint:disable-next-line: no-var-requires
 const rateLimit = require('telegraf-ratelimit');
 import { BotCommand } from 'telegraf/typings/telegram-types';
-import { crossCommand, detailCommand, helpCommand, marketCommand, startCommand } from '../commands';
+import { helpCommand, indicatorCommand, marketCommand, startCommand } from '../commands';
 import config from '../config';
 import { commandEnum } from './enums';
 import { ICryptanceContext } from './interfaces';
@@ -26,9 +26,8 @@ function botUtils() {
   bot
     .command(commandEnum.start, startCommand())
     .command(commandEnum.help, helpCommand())
-    .command(commandEnum.detail, detailCommand())
-    .command(commandEnum.market, marketCommand())
-    .command(commandEnum.cross, crossCommand());
+    .command(commandEnum.indicator, indicatorCommand())
+    .command(commandEnum.market, marketCommand());
 }
 
 const catcherMiddleware = async (ctx: ICryptanceContext, next: any): Promise<void> => {
@@ -91,9 +90,8 @@ async function syncCommands() {
 }
 
 const commands: BotCommand[] = [
-  { command: commandEnum.detail, description: 'Get Detail' },
+  { command: commandEnum.indicator, description: 'Get Indicators' },
   { command: commandEnum.market, description: 'Market Action Results' },
-  { command: commandEnum.cross, description: 'Cross Action' },
   { command: commandEnum.help, description: 'Get Help' },
 ];
 

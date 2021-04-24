@@ -33,6 +33,15 @@ export interface IMarketActionResponse {
   executedOrders: IMarketOrder[];
 }
 
+export interface IPairAction {
+  pair: IPair;
+  action: ActionType;
+}
+
+export interface IPairActionLoop {
+  loop: IPairAction[];
+}
+
 export interface IMarketOrder {
   price: number;
   quantity: number;

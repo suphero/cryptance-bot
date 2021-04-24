@@ -1,7 +1,6 @@
 export const commandEnum = {
-  cross: 'cross',
-  detail: 'detail',
   help: 'help',
+  indicator: 'indicator',
   market: 'market',
   start: 'start',
 };

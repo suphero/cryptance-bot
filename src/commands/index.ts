@@ -1,5 +1,4 @@
-export * from './crossCommand';
-export * from './detailCommand';
 export * from './helpCommand';
+export * from './indicatorCommand';
 export * from './marketCommand';
 export * from './startCommand';
