@@ -13,7 +13,6 @@
   "scripts": {
     "coverage": "nyc npm run test",
     "dev": "dotenv -- nodemon -e ts -x ts-node src/lib/telegram.ts",
-    "invoke:createChat": "sls invoke local --function createChatJob",
     "prettier": "prettier --write .",
     "test": "ava test/* --serial",
     "tslint": "tslint --project tsconfig.json"
