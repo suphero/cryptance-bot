@@ -7,14 +7,18 @@ export class OptionalArgs {
   }
 
   public get isDetail(): boolean {
-    return _.includes(this.args, 'd');
+    return this.checkArg('d');
   }
 
   public get isTarget(): boolean {
-    return _.includes(this.args, 't');
+    return this.checkArg('t');
   }
 
   public get isNote(): boolean {
-    return _.includes(this.args, 'n');
+    return this.checkArg('n');
+  }
+
+  private checkArg(arg: string): boolean {
+    return _.includes(this.args, arg);
   }
 }
