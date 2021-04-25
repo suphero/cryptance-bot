@@ -49,3 +49,16 @@ export interface IMarketOrder {
 
 // tslint:disable-next-line: no-empty-interface
 export interface ICryptanceContext extends TelegrafContext {}
+
+export interface ICandlestick {
+  openTime: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
+  closeTime: number;
+  quoteAssetVolume: number;
+  trades: number;
+  baseAssetVolume: number;
+}
